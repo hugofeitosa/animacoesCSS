@@ -1,0 +1,38 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container .slide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .slide.slide1
+{
+  background: url(coca2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container .slide.slide2
+{
+  background: url(coca3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  left: 50%;
+}
