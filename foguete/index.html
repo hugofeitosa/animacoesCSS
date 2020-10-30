@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Foguete</title>
+</head>
+<body>
+    <div class="cena">
+        <div class="foguete">
+            <img src="./imagens/foguete.png">
+        </div>
+    </div>
+    <script>
+        function estrelas() {
+            let contador = 20;
+            let cena = document.querySelector('.cena');
+            let i = 0;
+            while(i < contador) {
+                let estrela = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+
+                let duracao = Math.random() * 1;
+                let altura = Math.random() * 100;
+
+                estrela.style.left = x + 'px';
+                estrela.style.width = 1 + 'px';
+                estrela.style.height = 50 + altura + 'px';
+                estrela.style.animationDuration = duracao + 's';
+
+                cena.appendChild(estrela);
+                i++
+            }
+        }
+        estrelas();
+    </script>
+</body>
+</html>
