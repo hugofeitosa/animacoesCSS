@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <title>Barra de progresso</title>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-3x fa-battery-full icon"></i>
+
+        <div class="progress2 progress-moved">
+            <div class= "progress-bar2"></div>
+            <div class="loader" style="--n: 1; --f: 0;"></div>
+        </div>
+    </div>
+    <script>
+        CSS.registerProperty({
+            name: "--p",
+            syntax: "<integer>",
+            initialValue: 0,
+            inherits: true,
+        });
+    </script>
+</body>
+</html>
