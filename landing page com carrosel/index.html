@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing page</title>
+</head>
+<body>
+    <div id="container">
+        <nav class="navbar">
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Produtos</a>
+            <a href="#">Compre Agora</a>
+        </nav>
+        <div id="background"></div>
+        <div class="section">
+            <h1 id="titulo" class="margin-top">Iphone 6s Plus</h1>
+            <h2 class="less-margin">
+                Só mudou uma coisa:
+                <span class="highlight">Tudo!</span>
+            </h2>
+            <br />
+            <h2>Disponível em:
+                <span class="highlight">apple.com.br</span>
+            </h2>
+
+            <div class="alta">
+                <img id="alta" src="./images/1a.png" alt="">
+                <div class="button rosegold" id="rosegold" onclick="rosegoldColor()"></div>
+                <div class="button coral" id="coral" onclick="coralColor()"></div>
+                <div class="button fuschia" id="fuschia" onclick="fuschiaColor()"></div>
+                <div class="button black" id="black" onclick="goldColor()"></div>
+            </div>
+        </div>
+        <p id="descricao" style="text-align: justify;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Iusto numquam fuga pariatur eum aliquam ipsum blanditiis 
+            error modi, ab nihil vitae nobis officia dolorem labore at 
+            quae accusantium expedita recusandae!
+        </p>
+    </div>
+    <script>
+        let alta = document.getElementById('alta');
+        let background = document.getElementById('background');
+        let titulo = document.getElementById('titulo');
+
+            function rosegoldColor() {
+                alta.src='./images/1a.png';
+                background.style.backgroundColor = '#E6C7C2';
+                title.style.color= '#E6C7C2';
+            }
+
+            function coralColor() {
+                alta.src='./images/2a.png';
+                background.style.backgroundColor = '#DFCCB7';
+                title.style.color= '#DFCCB7';
+            }
+
+            function fuschiaColor() {
+                alta.src='./images/3a.png';
+                background.style.backgroundColor = '#E4E4E2';
+                title.style.color= '#E4E4E2';
+            }
+
+            function goldColor() {
+                alta.src='./images/4a.png';
+                background.style.backgroundColor = '#25282A';
+                title.style.color= '#25282A';
+            }
+    </script>
+</body>
+</html>
