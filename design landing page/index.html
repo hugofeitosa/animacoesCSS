@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Design para landing page</title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">NFC Leaders</a>
+            <div class="toggle"></div>
+        </header>
+        <div class="container">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="./images/1.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="./images/2.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="./images/3.jpg">
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="./images/4.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="sci">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+            <p class="copyright">
+                © Hugo Feitosa, 2020
+            </p>
+        </div>
+    </section>
+    <script>
+        const imgBox = document.querySelectorAll('.imgBox');
+        imgBox.forEach(popup => popup.addEventListener('click',()=>{
+            popup.classList.toggle('active')
+        }))
+    </script>
+</body>
+</html>
