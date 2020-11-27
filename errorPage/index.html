@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de erro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="conteudo">
+            <h2>404</h2>
+            <h4>Página não encontrada!</h4>
+            <p>A página que você está procurando não existe. Você pode ter digitado incorretamente o endereço ou a página pode ter sido removida</p>
+            <a href="#">Volte para página inicial</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var container = document.getElementById('container');
+        window.onmousemove = function(e) {
+            var x = - e.clientX/5,
+                y = - e.clientY/5;
+            container.style.backgroundPositionX = x + 'px';
+            container.style.backgroundPositionY = y + 'px';
+        }
+    </script>
+</body>
+</html>
