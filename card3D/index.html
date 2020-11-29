@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+    <title>Efeito card hover</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="./images/cuzco.jpg" alt="cuzco">
+            <div class="subtitulo">
+                <h1>Cuzco</h1>
+                <h3>Conheça!</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/santaBarbara.jpg" alt="Cachoeira Santa Barbara">
+            <div class="subtitulo">
+                <h1>Goiás</h1>
+                <h3>Conheça!</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/noronha.jpg" alt="Cataratas do Niágara">
+            <div class="subtitulo">
+                <h1>F.Noronha</h1>
+                <h3>Conheça!</h3>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.card').mousemove(function(e) {
+                var x = e.offsetX/15;
+                var y = e.offsetY/15;
+                $(this).css('transform','rotateX(' + x + 'deg) rotateY(' + y + 'deg)');
+                $(this).children('img').css({'top':y, 'left':x});
+            });
+
+            $('.card').mouseleave(function() {
+                $(this).css('transform','rotateX(0deg) rotateY(0deg)');
+                $(this).children('img').css({'top':'0', 'left':'0'});
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    transition: all .2s linear;
+    text-transform: capitalize;
+}
+
+body
+{
+    background: #333;
+    overflow: hidden;
+}
+
+.container
+{
+   min-height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   perspective: 1000px;
+}
+
+.card
+{
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 10px 30px;
+}
+
+.card img
+{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.card:hover img
+{
+   transform: scale(1.2); 
+}
+
+.card .subtitulo
+{
+    height: 95%;
+    width: 95%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding-top: 150px;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.card:hover .subtitulo
+{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.card .subtitulo h1
+{
+    background: #007FFF;
+    margin: .1rem 2.5rem;
+    padding: .5rem 0;
+    transform: translateX(-20rem);
+    transition-delay: .2s;
+}
+
+.card .subtitulo h3
+{
+    background: #333;
+    margin: .5rem 4.5rem;
+    padding: .5rem 0;
+    transform: translateX(20rem);
+    transition-delay: .4s;
+}
+
+.card .subtitulo h3:hover 
+{
+    background: #FF7F00;
+}
+
+.card:hover .subtitulo h1,
+.card:hover .subtitulo h3
+{
+    transform: translateX(0rem);
+}
