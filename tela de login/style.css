@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+section .caixaImagem
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .caixaImagem img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .conteudoCaixa
+{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+section .conteudoCaixa .caixaFormulario
+{
+    width: 50%;
+}
+section .conteudoCaixa .caixaFormulario h2
+{
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #e7ff00;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .conteudoCaixa .caixaFormulario .inputBx
+{
+    margin-bottom: 20px;
+}
+section .conteudoCaixa .caixaFormulario .inputBx span
+{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #000000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+section .conteudoCaixa .caixaFormulario .inputBx input
+{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #000000;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000000;
+    background: transparent;
+    border-radius: 30px;
+}
+section .conteudoCaixa .caixaFormulario .inputBx input[type="submit"]
+{
+    background: #000000;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+section .conteudoCaixa .caixaFormulario .inputBx input[type="submit"]:hover
+{
+    background: #e7ff00;
+    color: #000000;
+}
+section .conteudoCaixa .caixaFormulario .relembrar
+{
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+}
+section .conteudoCaixa .caixaFormulario .inputBx p
+{
+    color: #000000;
+}
+section .conteudoCaixa .caixaFormulario .inputBx p a
+{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+section .conteudoCaixa .caixaFormulario h3
+{
+    color: #000000;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 500;
+}
+section .conteudoCaixa .caixaFormulario .redesSociais
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .conteudoCaixa .caixaFormulario .redesSociais li
+{
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 50%;
+    margin: 0 7px;
+    cursor: pointer;
+}
+section .conteudoCaixa .caixaFormulario .redesSociais li:hover
+{
+    background: #e7ff00;
+}
+section .conteudoCaixa .caixaFormulario .redesSociais li img
+{
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+@media (max-width: 768px)
+{
+    section .caixaImagem
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .conteudoCaixa
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .conteudoCaixa .caixaFormulario
+    {
+        width: 100%;
+        padding: 40px;
+        background: rgb(255 255 255 / 0.9);
+        margin: 50px;
+    }
+    section .conteudoCaixa .caixaFormulario h3
+    {
+        color: #000000;
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+}
