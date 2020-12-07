@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161616;
+}
+section .circulo
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: chartreuse;
+    clip-path: circle(70% at right -20%);
+}
+
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logomarca
+{
+    position: relative;
+    max-width: 150px;
+}
+
+header .navegacao
+{
+    position: relative;
+    display: flex;
+}
+header .navegacao li
+{
+    list-style: none;
+}
+header .navegacao li a
+{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.conteudo
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.conteudo .caixaDeTexto
+{
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+.conteudo .caixaDeTexto h2
+{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+.conteudo .caixaDeTexto p
+{
+    color: #fff;
+    text-align: justify;
+}
+.conteudo .caixaDeTexto a
+{
+   display: inline-block;
+   margin-top: 20px;
+   padding: 8px 20px;
+   background: chartreuse;
+   color: #fff;
+   border-radius: 40px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   text-decoration: none; 
+}
+
+.redesSociais
+{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redesSociais li
+{
+    list-style: none;
+}
+.redesSociais li a
+{
+    display: inline-block;
+    margin-left: 15px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+.redesSociais li a:hover
+{
+    background: chartreuse;
+    transform: translateY(-10px);
+}
+.redesSociais li a img
+{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+/**********************SLIDER************************/
+
+.swiper-container
+{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo .caixaDaImagem
+{
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+.conteudo .caixaDaImagem img
+{
+    max-width: 150px;
+}
+
+.swiper-slide img
+{
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right
+{
+    background-image: none;
+}
+
+@media (max-width: 991px)
+{
+    header
+    {
+        padding: 40px; 
+    }
+    section
+    {
+        padding: 150px 40px;
+    }
+    .sci
+    {
+        left: 40px;
+    }
+    .conteudo
+    {
+        flex-direction: column;
+    }
+    .conteudo .caixaDeTexto
+    {
+        max-width: 100%;
+    }
+    .swiper-slide
+    {
+        height: 300px;
+    }
+    header .navegacao
+    {
+       display: none; 
+    }
+    header .navegacao.active
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: chartreuse;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    header .navegacao li a
+    {
+        margin: 10px 0;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(./images/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 10000;
+    }
+    .toggle.active
+    {
+        position: fixed;
+        right: 40px;
+        background: url(./images/fechar.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Página Inicial Mountain Dew</title>
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            <a href="#"><img src="./images/logomarca.png" class="logomarca" alt="Logo Mountain Dew"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navegacao">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="conteudo">
+            <div class="caixaDeTexto">
+                <h2>DO THE DEW!</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, iste quae!
+                Similique voluptatum doloremque vitae veritatis nemo animi laboriosam facilis quibusdam?
+                 Dolore enim veniam architecto reprehenderit id fugit ea vel?</p>
+                <a href="#">Saiba Mais!</a>        
+            </div>
+
+            <div class="caixaDaImagem">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/mountainDew1.png"></div>
+                        <div class="swiper-slide"><img src="./images/mountainDew2.png"></div>
+                        <div class="swiper-slide"><img src="./images/mountainDew3.png"></div>
+                        <div class="swiper-slide"><img src="./images/mountainDew4.png"></div>
+                        <div class="swiper-slide"><img src="./images/mountainDew5.png"></div>
+                        <div class="swiper-slide"><img src="./images/mountainDew6.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="redesSociais">
+            <li><a href="https://www.facebook.com/mountaindew" target="blank"><img src="./images/facebook.png"></a></li>
+            <li><a href="https://www.instagram.com/mountaindew/" target="blank"><img src="./images/instagram.png"></a></li>
+            <li><a href="https://twitter.com/mountaindew" target="blank"><img src="./images/twitter.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          loop: true,
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navegacao = document.querySelector('.navegacao')
+            menuToggle.classList.toggle('active')
+            navegacao.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>
